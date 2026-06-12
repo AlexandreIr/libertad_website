@@ -1,0 +1,43 @@
+# dependencies
+node_modules/
+
+# Next.js / React
+.next/
+out/
+dist/
+build/
+
+# Java / Spring
+target/
+*.class
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# arquivos pesados comuns
+*.zip
+*.rar
+*.7z
+*.mp4
+*.mov
+*.psd
+*.ai
+
+# uploads locais
+uploads/
