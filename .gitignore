@@ -7,9 +7,6 @@ out/
 dist/
 build/
 
-# Java / Spring
-target/
-*.class
 
 # env
 .env

@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
 import { Icon } from '@/components/Icon';
+import { siteConfig } from '@/data/site';
 
 export function CTASection({
   title = 'Sua operação precisa de mais organização, segurança e previsibilidade?',
@@ -28,7 +29,7 @@ export function CTASection({
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button href="/orcamento" variant="red">Solicitar orçamento</Button>
-              <Button href="https://wa.me/5511987654321" variant="ghost">Falar no WhatsApp</Button>
+              <Button href={`https://wa.me/+55${siteConfig.whatsapp.replace(/\D/g, '')}`} variant="ghost">Falar no WhatsApp</Button>
             </div>
           </div>
         </div>

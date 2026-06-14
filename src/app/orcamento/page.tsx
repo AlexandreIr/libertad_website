@@ -44,9 +44,9 @@ export default function BudgetPage() {
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
             <BudgetForm />
 
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card sm:p-8">
-              <h2 className="font-heading text-2xl font-black text-ink">Por que escolher a LCS?</h2>
-              <div className="mt-8 grid gap-6">
+            <div className="sticky top-25 max-h-screen overflow-y-auto rounded-3xl border border-slate-200 bg-white p-4 shadow-card sm:p-5">
+              <h2 className="font-heading text-xl font-black text-ink">Por que escolher a LCS?</h2>
+              <div className="mt-5 grid gap-4">
                 {[
                   ['Experiência comprovada', 'Soluções operacionais com alto padrão de qualidade.'],
                   ['Equipe treinada e supervisionada', 'Profissionais preparados para representar sua empresa.'],
@@ -54,19 +54,19 @@ export default function BudgetPage() {
                   ['Contratos sob medida', 'Flexibilidade, segurança e transparência em cada etapa.'],
                   ['Atendimento próximo', 'Suporte antes, durante e depois da implantação.'],
                 ].map(([title, text], index) => (
-                  <div key={title} className="flex gap-4">
+                  <div key={title} className="flex gap-3">
                     <IconBadge name={index === 0 ? 'check' : index === 1 ? 'people' : index === 2 ? 'shield' : index === 3 ? 'document' : 'headset'} />
                     <div>
-                      <h3 className="font-heading text-lg font-black text-ink">{title}</h3>
-                      <p className="mt-1 text-sm leading-6 text-slate-600">{text}</p>
+                      <h3 className="font-heading text-base font-black text-ink">{title}</h3>
+                      <p className="mt-0.5 text-xs leading-5 text-slate-600">{text}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-8 rounded-3xl bg-navy p-6 text-white">
-                <IconBadge name="chart" className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white" />
-                <h3 className="mt-4 font-heading text-xl font-black">Soluções que geram resultados reais</h3>
-                <p className="mt-2 text-sm leading-6 text-white/75">Ambientes mais organizados, seguros e produtivos para o crescimento do seu negócio.</p>
+              <div className="mt-5 rounded-2xl bg-navy p-4 text-white">
+                <IconBadge name="chart" className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-white" />
+                <h3 className="mt-2 font-heading text-base font-black">Soluções que geram resultados reais</h3>
+                <p className="mt-1 text-xs leading-5 text-white/75">Ambientes mais organizados, seguros e produtivos para o crescimento do seu negócio.</p>
               </div>
             </div>
           </div>

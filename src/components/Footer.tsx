@@ -71,7 +71,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-white/60">
-          © 2026 LCS — Libertad Comercial e Serviços. Todos os direitos reservados.
+          © {new Date().getFullYear()} LCS — Libertad Comercial e Serviços. Todos os direitos reservados.
         </div>
       </div>
     </footer>
@@ -82,7 +82,7 @@ function FooterColumn({ title, children }: { title: string; children: React.Reac
   return (
     <div>
       <h3 className="font-heading text-sm font-bold uppercase tracking-[0.18em] text-white">{title}</h3>
-      <div className="mt-4 grid gap-2 text-sm text-white/70 [&_a]:transition hover:[&_a]:text-white">
+      <div className="mt-4 grid gap-2 text-sm text-white/70 [&_a]:transition [&_a:hover]:text-white">
         {children}
       </div>
     </div>

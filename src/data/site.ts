@@ -46,8 +46,8 @@ export type IconName =
 
 export const services = [
   {
-    slug: 'facilities',
-    title: 'Facilities',
+    slug: 'manutencao',
+    title: 'Manutenção de próprios e zeladoria',
     icon: 'building' as IconName,
     short:
       'Gestão integrada de serviços que otimizam processos, reduzem custos e aumentam a eficiência operacional.',
@@ -66,7 +66,7 @@ export const services = [
   },
   {
     slug: 'limpeza-profissional',
-    title: 'Limpeza Profissional',
+    title: 'Limpeza, Asseio e Conservação',
     icon: 'spray' as IconName,
     short:
       'Ambientes limpos, higienizados e saudáveis com padrão elevado de qualidade e controle.',
@@ -105,6 +105,44 @@ export const services = [
   {
     slug: 'terceirizacao-mao-de-obra',
     title: 'Terceirização de Mão de Obra',
+    icon: 'people' as IconName,
+    short:
+      'Profissionais qualificados para diversas funções, com gestão completa e transparente.',
+    heroTitle:
+      'Terceirização de mão de obra com gestão, transparência e segurança.',
+    description:
+      'Montamos equipes sob medida para diferentes rotinas operacionais, com supervisão, controle e foco em resultado.',
+    included: [
+      'Recrutamento operacional',
+      'Equipe uniformizada',
+      'Supervisão contínua',
+      'Substituição planejada',
+      'Gestão de escalas',
+      'Indicadores de qualidade',
+    ],
+  },
+  {
+    slug: 'conservacao-jardinagem',
+    title: 'Conservação de areas verdes e jardinagem',
+    icon: 'people' as IconName,
+    short:
+      'Profissionais qualificados para diversas funções, com gestão completa e transparente.',
+    heroTitle:
+      'Terceirização de mão de obra com gestão, transparência e segurança.',
+    description:
+      'Montamos equipes sob medida para diferentes rotinas operacionais, com supervisão, controle e foco em resultado.',
+    included: [
+      'Recrutamento operacional',
+      'Equipe uniformizada',
+      'Supervisão contínua',
+      'Substituição planejada',
+      'Gestão de escalas',
+      'Indicadores de qualidade',
+    ],
+  },
+  {
+    slug: 'varricao',
+    title: 'Varrição manual e mecanizada',
     icon: 'people' as IconName,
     short:
       'Profissionais qualificados para diversas funções, com gestão completa e transparente.',

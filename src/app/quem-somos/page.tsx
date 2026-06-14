@@ -111,7 +111,7 @@ export default function AboutPage() {
           <SectionHeading title="Linha do tempo" />
           <div className="mt-12 grid gap-5 md:grid-cols-5">
             {[
-              ['2014', 'Fundação'],
+              ['1989', 'Fundação'],
               ['2016', 'Expansão regional'],
               ['2018', 'Novas soluções'],
               ['2021', 'Presença nacional'],
