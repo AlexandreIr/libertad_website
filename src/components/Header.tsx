@@ -59,7 +59,7 @@ export function Header() {
                   <button
                     onClick={() => setOpenDropdown(openDropdown === (isServicesDropdown ? 'services' : 'segments') ? null : (isServicesDropdown ? 'services' : 'segments'))}
                     className={cn(
-                      'relative text-sm font-semibold text-slate-700 transition hover:text-royal flex items-center gap-1.5 cursor-pointer',
+                      'relative text-sm font-semibold text-slate-700 transition hover:text-royal flex items-center gap-1.5 cursor-pointer hover:scale-110',
                       active && 'text-navy',
                     )}
                   >
@@ -101,7 +101,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  'relative text-sm font-semibold text-slate-700 transition hover:text-royal cursor-pointer',
+                  'relative text-sm font-semibold text-slate-700 transition hover:text-royal cursor-pointer hover:scale-110',
                   active && 'text-navy',
                 )}
                 onClick={() => setOpenDropdown(null)}
@@ -119,9 +119,13 @@ export function Header() {
           </Button>
           <Button
             href="/orcamento"
-            className="relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition cursor-pointer"
+            className="relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110 cursor-pointer"
           >
             <span className="relative z-10">Solicitar orçamento</span>
+
+            <div className="pointer-events-none absolute inset-0 flex h-full w-full justify-center animate-[shine_2.8s_linear_infinite]">
+               <div className="h-full w-30 bg-white/20 blur-sm -skew-x-12" />
+            </div>
           </Button>      
         </div>
 

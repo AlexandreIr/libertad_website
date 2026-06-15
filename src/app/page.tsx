@@ -7,6 +7,7 @@ import { Icon, IconBadge } from '@/components/Icon';
 import { SectionHeading } from '@/components/SectionHeading';
 import { VisualPanel } from '@/components/VisualPanel';
 import { benefits, posts, segments, services } from '@/data/site';
+import { ClientsCarousel } from '@/components/ClientsCarousel';
 
 export default function HomePage() {
   return (
@@ -38,6 +39,19 @@ export default function HomePage() {
               </div>
             </div>
             <VisualPanel label="Equipe operacional LCS" />
+          </div>
+        </Container>
+      </section>
+
+      <section className="section-y bg-page">
+        <Container>
+          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
+          <SectionHeading
+            title="Nossos clientes"
+            description="Organizações que confiam na LCS para manter seus ambientes operacionais limpos, seguros e eficientes."
+          />
+          <div className="mt-12">
+            <ClientsCarousel />
           </div>
         </Container>
       </section>

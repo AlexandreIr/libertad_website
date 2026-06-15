@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { BenefitCard, ServiceCard } from "@/components/Cards";
 import { Button } from "@/components/Button";
+import { ClientsCarousel } from "@/components/ClientsCarousel";
 import { Container } from "@/components/Container";
 import { CTASection } from "@/components/CTASection";
 import { FAQ } from "@/components/FAQ";
@@ -121,6 +122,19 @@ export default function ServicesPage() {
       </section>
 
       <section className="section-y bg-page">
+        <Container>
+          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
+          <SectionHeading
+            title="Meus clientes"
+            description="Empresas e organizações que confiam na LCS para manter seus ambientes operacionais, seguros e eficientes."
+          />
+          <div className="mt-12">
+            <ClientsCarousel/>
+          </div>
+        </Container>
+      </section>
+
+      <section className="section-y bg-white">
         <Container>
           <SectionHeading title="Perguntas frequentes" />
           <div className="mt-10">
