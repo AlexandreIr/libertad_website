@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { cn } from '@/lib/cn';
 
@@ -20,7 +18,7 @@ const clients: Client[] = [
 ];
 
 // Duplicar infinitamente para loop perfeito sem reset perceptível
-const infiniteClients = Array.from({ length: 20 }, () => clients).flat();
+const infiniteClients = Array.from({ length: 3 }, () => clients).flat();
 
 interface ClientsCarouselProps {
   className?: string;
@@ -38,7 +36,7 @@ export function ClientsCarousel({ className = '' }: ClientsCarouselProps) {
     }
     
     .carousel-scroll {
-      animation: infinite-scroll 20s linear infinite;
+      animation: infinite-scroll 10s linear infinite;
       will-change: transform;
     }
   `;
@@ -47,9 +45,7 @@ export function ClientsCarousel({ className = '' }: ClientsCarouselProps) {
     <div className={cn('w-full', className)}>
       <style>{animationStyles}</style>
 
-      {/* Carrousel Container */}
       <div className="relative overflow-hidden rounded-lg bg-white py-8 sm:py-12">
-        {/* Esteira infinita */}
         <div className="carousel-scroll flex gap-8 sm:gap-12 md:gap-16 px-4">
           {infiniteClients.map((client, index) => (
             <div
@@ -65,12 +61,14 @@ export function ClientsCarousel({ className = '' }: ClientsCarouselProps) {
                   className="object-contain opacity-80 grayscale group-hover:grayscale-0 transition-all duration-300"
                   sizes="(max-width: 640px) 80px, (max-width: 1024px) 96px, 120px"
                 />
+                <p className="absolute -bottom-6 left-0 right-0 text-center text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {client.name}
+                </p>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Gradient overlay edges */}
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-white to-transparent pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-white to-transparent pointer-events-none" />
       </div>

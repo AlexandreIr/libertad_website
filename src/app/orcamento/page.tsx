@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { BudgetForm } from '../../components/BudgetForm';
 import { Container } from '@/components/Container';
-import { CTASection } from '@/components/CTASection';
 import { FAQ } from '@/components/FAQ';
 import { Icon, IconBadge } from '@/components/Icon';
 import { SectionHeading } from '@/components/SectionHeading';
@@ -16,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function BudgetPage() {
   return (
-    <>
+    <div className="overflow-hidden">
       <section className="geometric-bg py-16 lg:py-20">
         <Container>
           <Breadcrumb items={[{ label: 'Orçamento' }]} />
@@ -97,7 +96,7 @@ export default function BudgetPage() {
           </section>
         </Container>
       </section>
-    </>
+    </div>
   );
 }
 

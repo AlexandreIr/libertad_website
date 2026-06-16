@@ -11,7 +11,7 @@ export function VisualPanel({
   className?: string;
 }) {
   return (
-    <div className={cn('relative min-h-[320px] overflow-hidden rounded-[2rem] bg-navy shadow-2xl', className)}>
+    <div className={cn('relative min-h-[320px] overflow-hidden rounded-[2rem] bg-navy shadow-2xl md:block hidden', className)}>
       <div className={cn('absolute inset-0 opacity-90', {
         'bg-[radial-gradient(circle_at_30%_25%,#6FABE4,transparent_35%),linear-gradient(135deg,#002E84,#10171F)]': variant === 'default',
         'bg-[radial-gradient(circle_at_70%_20%,#F5B33B,transparent_18%),linear-gradient(135deg,#002E84,#10171F)]': variant === 'industry',

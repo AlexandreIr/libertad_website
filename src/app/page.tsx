@@ -43,18 +43,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="section-y bg-page">
-        <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
-          <SectionHeading
-            title="Nossos clientes"
-            description="Organizações que confiam na LCS para manter seus ambientes operacionais limpos, seguros e eficientes."
-          />
-          <div className="mt-12">
-            <ClientsCarousel />
-          </div>
-        </Container>
-      </section>
 
       <section className="-mt-10 relative z-10">
         <Container>
@@ -158,6 +146,19 @@ export default function HomePage() {
             {posts.slice(0, 3).map((post) => (
               <PostCard key={post.slug} title={post.title} category={post.category} date={post.date} excerpt={post.excerpt} href={`/blog/${post.slug}`} />
             ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="section-y bg-page md:block hidden">
+        <Container>
+          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
+          <SectionHeading
+            title="Nossos clientes"
+            description="Organizações que confiam na LCS para manter seus ambientes operacionais limpos, seguros e eficientes."
+          />
+          <div className="mt-12">
+            <ClientsCarousel />
           </div>
         </Container>
       </section>
