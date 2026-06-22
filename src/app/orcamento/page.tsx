@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function BudgetPage() {
   return (
-    <div className="overflow-hidden">
+    <div>
       <section className="geometric-bg py-16 lg:py-20">
         <Container>
           <Breadcrumb items={[{ label: 'Orçamento' }]} />

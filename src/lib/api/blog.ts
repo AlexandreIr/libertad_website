@@ -51,7 +51,7 @@ function buildUrl(endpoint: string, params?: Record<string, any>): string {
 /**
  * Realiza uma requisição genérica com tratamento de erros
  */
-async function fetchFromApi<T>(
+export async function fetchFromApi<T>(
   url: string,
   options?: RequestInit
 ): Promise<ApiResponse<T>> {

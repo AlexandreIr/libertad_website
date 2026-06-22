@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Breadcrumb } from '@/components/Breadcrumb';
-import { Button } from '@/components/Button';
 import { PostCard } from '@/components/Cards';
 import { Container } from '@/components/Container';
 import { CTASection } from '@/components/CTASection';
-import { IconBadge } from '@/components/Icon';
 import { posts } from '@/data/site';
+import { fetchFromApi } from '@/lib/api/blog';
 
 export const metadata: Metadata = {
   title: 'Blog sobre facilities e gestão operacional',
@@ -39,7 +38,7 @@ export default function BlogPage() {
           <div className="grid gap-8 lg:grid-cols-[1fr_340px]">
             <div>
               <Link href={`/blog/${featured.slug}`} className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition hover:-translate-y-1 hover:shadow-xl md:grid-cols-[0.55fr_0.45fr]">
-                <div className="min-h-[280px] bg-gradient-to-br from-navy via-royal to-soft-blue" />
+                <div className="min-h-[70] bg-linear-to-br from-navy via-royal to-soft-blue" />
                 <div className="p-8">
                   <span className="rounded-full bg-navy px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-white">Destaque</span>
                   <p className="mt-5 text-sm text-slate-500">{featured.date}</p>
@@ -69,13 +68,6 @@ export default function BlogPage() {
             </div>
 
             <aside className="space-y-6">
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card">
-                <IconBadge name="mail" />
-                <h2 className="mt-4 font-heading text-xl font-black text-ink">Receba insights por e-mail</h2>
-                <p className="mt-2 text-sm leading-6 text-slate-600">Assine nossa newsletter e receba conteúdos exclusivos sobre facilities e gestão operacional.</p>
-                <input className="mt-5 w-full rounded-xl border border-slate-200 px-4 py-3 text-sm outline-none focus:border-royal" placeholder="Seu melhor e-mail" />
-                <Button className="mt-3 w-full">Inscrever-se</Button>
-              </div>
               <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card">
                 <h2 className="font-heading text-xl font-black text-ink">Categorias</h2>
                 <div className="mt-5 grid gap-4 text-sm font-semibold text-slate-700">
