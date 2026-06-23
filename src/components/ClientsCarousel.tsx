@@ -54,7 +54,7 @@ export function ClientsCarousel({ className = '' }: ClientsCarouselProps) {
           {infiniteClients.map((client, index) => (
             <div
               key={`${index}`}
-              className="flex-shrink-0 flex items-center justify-center"
+              className="shrink-0 flex items-center justify-center"
               style={{ width: 'calc(20% - 2.5rem)' }}
             >
               <div className="w-full h-20 sm:h-24 relative group">
@@ -73,8 +73,8 @@ export function ClientsCarousel({ className = '' }: ClientsCarouselProps) {
           ))}
         </div>
 
-        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-r from-white to-transparent pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-16 bg-linear-to-r from-white to-transparent pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-16 bg-linear-to-l from-white to-transparent pointer-events-none" />
       </div>
     </div>
   );

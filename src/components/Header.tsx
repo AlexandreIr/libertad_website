@@ -169,7 +169,7 @@ export function Header() {
                   </Link>
                 );
               })}
-              <Button href="/orcamento" className="mt-2 w-full">
+              <Button href="/orcamento" className="mt-2 w-ful">
                 Solicitar orçamento
               </Button>
             </nav>
