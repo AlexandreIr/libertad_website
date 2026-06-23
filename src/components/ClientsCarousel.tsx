@@ -15,10 +15,14 @@ const clients: Client[] = [
   { id: '5', name: 'Prefeitura de Rio Grande da Serra', image: '/clientes/rio-grande-da-serra.png' },
   { id: '6', name: 'Prefeitura de Santa Gertrudes', image: '/clientes/santa-gertrudes.png' },
   { id: '7', name: 'Prefeitura de Santana do Parnaíba', image: '/clientes/santana.png' },
+  { id: '8', name: 'Ribeiro Carram', image: '/clientes/ribeiro-carram.png' },
+  { id: '9', name: 'Hitachi Energy', image: '/clientes/hitachi.svg' },
+  { id: '10',name: 'Prefeitura de Maua', image: '/clientes/maua.png' },
+  { id: '11', name: 'Sport Club Corinthians Paulista', image: '/clientes/corinthians.png' },
 ];
 
 // Duplicar infinitamente para loop perfeito sem reset perceptível
-const infiniteClients = Array.from({ length: 3 }, () => clients).flat();
+const infiniteClients = Array.from({ length: 5 }, () => clients).flat();
 
 interface ClientsCarouselProps {
   className?: string;
@@ -31,7 +35,7 @@ export function ClientsCarousel({ className = '' }: ClientsCarouselProps) {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(calc(-7 * 100% / 5));
+        transform: translateX(calc(-9 * 100% / 5));
       }
     }
     

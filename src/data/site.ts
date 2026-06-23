@@ -6,7 +6,7 @@ export const siteConfig = {
     'Soluções em facilities, limpeza profissional, manutenção, portaria e apoio operacional para empresas, condomínios, indústrias e instituições.',
   phone: '(11) 2311-3010',
   whatsapp: '(11) 91417-6485',
-  email: 'contato@lcsservicos.com.br',
+  email: 'aline.roberto@lcscomercial.com.br',
   address: 'Rua Bom Pastor, 739 — Ipiranga, São Paulo/SP',
   cnpj: '00.000.000/0000-00',
 };
@@ -15,7 +15,7 @@ export const navItems = [
   { label: 'Serviços', href: '/servicos' },
   { label: 'Segmentos', href: '/segmentos' },
   { label: 'Quem Somos', href: '/quem-somos' },
-  { label: 'Blog', href: '/blog' },
+ // { label: 'Blog', href: '/blog' },
   { label: 'Trabalhe Conosco', href: '/trabalhe-conosco' },
   { label: 'Contato', href: '/orcamento' },
 ];
@@ -123,7 +123,7 @@ export const services = [
   },
   {
     slug: 'conservacao-jardinagem',
-    title: 'Conservação de areas verdes e jardinagem',
+    title: 'Conservação de áreas verdes e jardinagem',
     icon: 'people' as IconName,
     short:
       'Profissionais qualificados para diversas funções, com gestão completa e transparente.',
