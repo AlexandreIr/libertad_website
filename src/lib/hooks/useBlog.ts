@@ -22,9 +22,6 @@ import {
   getBlogCategories,
 } from '@/lib/api/blog';
 
-// ============================================================
-// TIPOS DO HOOK
-// ============================================================
 
 interface UseQueryState<T> {
   data: T | null;

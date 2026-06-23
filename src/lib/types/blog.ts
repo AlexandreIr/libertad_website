@@ -1,50 +1,62 @@
-export interface Category {
-  id: number;
-  name: string;
+/**
+ * Interface para um post do blog
+ * Estrutura que será retornada pela API real
+ */
+export interface BlogPost {
+  id?: string;
   slug: string;
-}
-
-export interface PostSummary {
-  id: number;
   title: string;
-  slug: string;
-  summary: string;
-  coverImageUrl?: string;
-  publishedAt?: string;
-  authorName?: string;
-  categories: Category[];
-}
-
-export interface PostDetail {
-  id: number;
-  title: string;
-  slug: string;
-  summary: string;
-  content: string;
-  coverImageUrl?: string;
-  metaTitle?: string;
-  metaDescription?: string;
-  publishedAt?: string;
-  authorName?: string;
-  categories: Category[];
-}
-
-export interface Comment {
-  id: number;
-  authorName: string;
-  authorEmail?: string;
-  content: string;
-  status?: string;
-  postId?: number;
+  category: string;
+  date: string;
+  readTime: string;
+  excerpt: string;
+  content?: string; // Para página individual do post
+  author?: string;
+  imageUrl?: string;
+  tags?: string[];
   createdAt?: string;
+  updatedAt?: string;
 }
 
-export interface PagedResponse<T> {
-  content: T[];
-  page: number;
-  size: number;
-  totalElements: number;
-  totalPages: number;
-  first: boolean;
-  last: boolean;
+/**
+ * Resposta da API para listagem de posts
+ */
+export interface BlogPostsResponse {
+  success: boolean;
+  data: BlogPost[];
+  total: number;
+  page?: number;
+  limit?: number;
+  message?: string;
+}
+
+/**
+ * Resposta da API para um post individual
+ */
+export interface BlogPostResponse {
+  success: boolean;
+  data: BlogPost;
+  message?: string;
+}
+
+/**
+ * Parâmetros para filtrar posts
+ */
+export interface BlogPostsFilter {
+  category?: string;
+  search?: string;
+  page?: number;
+  limit?: number;
+  sortBy?: 'date' | 'title' | 'readTime';
+  order?: 'asc' | 'desc';
+}
+
+/**
+ * Resposta de erro da API
+ */
+export interface ApiErrorResponse {
+  success: false;
+  error: string;
+  message: string;
+  status?: number;
 }

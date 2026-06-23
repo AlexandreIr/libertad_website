@@ -9,7 +9,7 @@
 
 'use client';
 
-import { useBlogPosts, useBlogCategories } from '@/lib/hooks/useBlog';
+import { useBlogPosts, useBlogCategories, useBlogPostBySlug } from '@/lib/hooks/useBlog';
 import { BlogPostsFilter } from '@/lib/types/blog';
 import { useState } from 'react';
 
