@@ -70,6 +70,7 @@ export default function ServicesPage() {
           />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
+              service.slug != 'outros' &&(
               <ServiceCard
                 key={service.slug}
                 title={service.title}
@@ -77,7 +78,7 @@ export default function ServicesPage() {
                 icon={service.icon}
                 href={`/servicos/${service.slug}`}
               />
-            ))}
+            )))}
             <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card lg:col-span-3">
               <div className="grid gap-8 md:grid-cols-[0.5fr_1fr] md:items-center">
                 <VisualPanel

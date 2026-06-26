@@ -99,8 +99,8 @@ export function ClientsCarousel({
           <ClientsGroup items={loopItems} ariaHidden />
         </div>
 
-        <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-12 bg-gradient-to-r from-white to-transparent sm:w-16 md:w-24" />
-        <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-12 bg-gradient-to-l from-white to-transparent sm:w-16 md:w-24" />
+        <div className="pointer-events-none absolute bottom-0 left-0 top-0 w-12 bg-linear-to-r from-white to-transparent sm:w-16 md:w-24" />
+        <div className="pointer-events-none absolute bottom-0 right-0 top-0 w-12 bg-linear-to-l from-white to-transparent sm:w-16 md:w-24" />
       </div>
     </section>
   );

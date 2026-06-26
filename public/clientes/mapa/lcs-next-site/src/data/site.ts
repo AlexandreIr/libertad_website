@@ -1,13 +1,13 @@
 export const siteConfig = {
   name: 'LCS — Libertad Comercial e Serviços',
   shortName: 'LCS',
-  url: 'https://libertadfacilities.com.br/',
+  url: 'https://www.lcsservicos.com.br',
   description:
     'Soluções em facilities, limpeza profissional, manutenção, portaria e apoio operacional para empresas, condomínios, indústrias e instituições.',
-  phone: '(11) 2311-3010',
-  whatsapp: '(11) 91417-6485',
-  email: 'aline.roberto@lcscomercial.com.br',
-  address: 'Rua Bom Pastor, 739 — Ipiranga, São Paulo/SP',
+  phone: '(11) 4000-1234',
+  whatsapp: '(11) 98765-4321',
+  email: 'contato@lcsservicos.com.br',
+  address: 'Rua das Palmeiras, 500 — Consolação, São Paulo/SP',
   cnpj: '00.000.000/0000-00',
 };
 
@@ -15,7 +15,7 @@ export const navItems = [
   { label: 'Serviços', href: '/servicos' },
   { label: 'Segmentos', href: '/segmentos' },
   { label: 'Quem Somos', href: '/quem-somos' },
- // { label: 'Blog', href: '/blog' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Trabalhe Conosco', href: '/trabalhe-conosco' },
   { label: 'Contato', href: '/orcamento' },
 ];
@@ -46,8 +46,8 @@ export type IconName =
 
 export const services = [
   {
-    slug: 'manutencao',
-    title: 'Manutenção de próprios e zeladoria',
+    slug: 'facilities',
+    title: 'Facilities',
     icon: 'building' as IconName,
     short:
       'Gestão integrada de serviços que otimizam processos, reduzem custos e aumentam a eficiência operacional.',
@@ -66,7 +66,7 @@ export const services = [
   },
   {
     slug: 'limpeza-profissional',
-    title: 'Limpeza, Asseio e Conservação',
+    title: 'Limpeza Profissional',
     icon: 'spray' as IconName,
     short:
       'Ambientes limpos, higienizados e saudáveis com padrão elevado de qualidade e controle.',
@@ -84,8 +84,8 @@ export const services = [
     ],
   },
   {
-    slug: 'portaria-controladores-acesso',
-    title: 'Portaria e Controladores de Acesso',
+    slug: 'portaria-controle-acesso',
+    title: 'Portaria e Controle de Acesso',
     icon: 'shield' as IconName,
     short:
       'Segurança, recepção e controle de acesso com tecnologia e profissionais qualificados.',
@@ -100,6 +100,44 @@ export const services = [
       'Apoio à segurança patrimonial',
       'Padronização de atendimento',
       'Relatórios de movimentação',
+    ],
+  },
+  {
+    slug: 'manutencao-predial',
+    title: 'Manutenção Predial',
+    icon: 'wrench' as IconName,
+    short:
+      'Manutenção preventiva e corretiva para garantir conservação, segurança e continuidade das operações.',
+    heroTitle:
+      'Manutenção predial para reduzir falhas e preservar sua estrutura.',
+    description:
+      'Executamos rotinas preventivas e corretivas para manter instalações funcionando com segurança e previsibilidade.',
+    included: [
+      'Manutenção preventiva',
+      'Pequenos reparos',
+      'Apoio elétrico e hidráulico',
+      'Inspeções recorrentes',
+      'Registro de chamados',
+      'Planos de conservação',
+    ],
+  },
+  {
+    slug: 'apoio-administrativo',
+    title: 'Apoio Administrativo',
+    icon: 'briefcase' as IconName,
+    short:
+      'Suporte administrativo e operacional para mais produtividade e foco no core business.',
+    heroTitle:
+      'Apoio administrativo para simplificar rotinas e dar fluidez à operação.',
+    description:
+      'Disponibilizamos profissionais e processos de apoio para melhorar organização, atendimento interno e produtividade.',
+    included: [
+      'Apoio documental',
+      'Recepção interna',
+      'Organização de rotinas',
+      'Suporte a equipes',
+      'Controle de solicitações',
+      'Relatórios administrativos',
     ],
   },
   {
@@ -121,66 +159,18 @@ export const services = [
       'Indicadores de qualidade',
     ],
   },
-  {
-    slug: 'conservacao-jardinagem',
-    title: 'Conservação de áreas verdes e jardinagem',
-    icon: 'people' as IconName,
-    short:
-      'Profissionais qualificados para diversas funções, com gestão completa e transparente.',
-    heroTitle:
-      'Terceirização de mão de obra com gestão, transparência e segurança.',
-    description:
-      'Montamos equipes sob medida para diferentes rotinas operacionais, com supervisão, controle e foco em resultado.',
-    included: [
-      'Recrutamento operacional',
-      'Equipe uniformizada',
-      'Supervisão contínua',
-      'Substituição planejada',
-      'Gestão de escalas',
-      'Indicadores de qualidade',
-    ],
-  },
-  {
-    slug: 'varricao',
-    title: 'Varrição manual e mecanizada',
-    icon: 'people' as IconName,
-    short:
-      'Profissionais qualificados para diversas funções, com gestão completa e transparente.',
-    heroTitle:
-      'Terceirização de mão de obra com gestão, transparência e segurança.',
-    description:
-      'Montamos equipes sob medida para diferentes rotinas operacionais, com supervisão, controle e foco em resultado.',
-    included: [
-      'Recrutamento operacional',
-      'Equipe uniformizada',
-      'Supervisão contínua',
-      'Substituição planejada',
-      'Gestão de escalas',
-      'Indicadores de qualidade',
-    ],
-  },
-  {
-    slug: 'outros',
-    title: 'Outros (especifique na mensagem abaixo)',
-    icon: 'people' as IconName,
-    short:
-      'Profissionais qualificados para diversas funções, com gestão completa e transparente.',
-    heroTitle:
-      'Terceirização de mão de obra com gestão, transparência e segurança.',
-    description:
-      'Montamos equipes sob medida para diferentes rotinas operacionais, com supervisão, controle e foco em resultado.',
-    included: [
-      'Recrutamento operacional',
-      'Equipe uniformizada',
-      'Supervisão contínua',
-      'Substituição planejada',
-      'Gestão de escalas',
-      'Indicadores de qualidade',
-    ],
-  },
 ];
 
 export const segments = [
+  {
+    slug: 'condominios',
+    title: 'Condomínios',
+    icon: 'building' as IconName,
+    description:
+      'Gestão completa de limpeza, conservação, portaria e apoio para áreas comuns e privadas.',
+    heroTitle:
+      'Soluções operacionais para condomínios que precisam de organização, segurança e conservação.',
+  },
   {
     slug: 'industrias',
     title: 'Indústrias',

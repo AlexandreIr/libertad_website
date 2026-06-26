@@ -80,6 +80,7 @@ export function Header() {
                     <div className="absolute left-0 mt-0 w-56 rounded-lg border border-slate-200 bg-white shadow-lg z-50">
                       <div className="p-2">
                         {(isServicesDropdown ? services : segments).map((item) => (
+                          item.slug !== 'outros' && (
                           <Link
                             key={item.slug}
                             href={`${isServicesDropdown ? '/servicos' : '/segmentos'}/${item.slug}`}
@@ -88,7 +89,7 @@ export function Header() {
                           >
                             {item.title}
                           </Link>
-                        ))}
+                        )))}
                       </div>
                     </div>
                   )}
@@ -150,6 +151,7 @@ export function Header() {
                       </summary>
                       <div className="grid gap-1 bg-slate-50 rounded-lg p-2 ml-2 mt-1">
                         {(isServicesDropdown ? services : segments).map((subItem) => (
+                          subItem.slug != 'outros' &&(
                           <Link
                             key={subItem.slug}
                             href={`${isServicesDropdown ? '/servicos' : '/segmentos'}/${subItem.slug}`}
@@ -157,7 +159,7 @@ export function Header() {
                           >
                             {subItem.title}
                           </Link>
-                        ))}
+                        )))}
                       </div>
                     </details>
                   );

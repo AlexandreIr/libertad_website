@@ -76,7 +76,7 @@ export default async function BlogPage() {
                 href={`/blog/${featured.slug}`}
                 className="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition hover:-translate-y-1 hover:shadow-xl md:grid-cols-[0.55fr_0.45fr]"
               >
-                <div className="min-h-[70px] bg-linear-to-br from-navy via-royal to-soft-blue" />
+                <div className="min-h-17.5 bg-linear-to-br from-navy via-royal to-soft-blue" />
 
                 <div className="p-8">
                   <span className="rounded-full bg-navy px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-white">

@@ -57,24 +57,22 @@ export function Footer() {
             <Link href="/blog">Blog</Link>
             <Link href="/trabalhe-conosco">Trabalhe Conosco</Link>
             <Link href="/politica-de-privacidade">Política de Privacidade</Link>
-            <Link href="/orcamento">Orçamento</Link>
-            <Link href="/conduta">Código de conduta</Link>
-            <Link href="/ouvidoria">Ouvidoria</Link>
             <Link href="/mapa-do-site">Mapa do Site</Link>
+            <Link href="/orcamento">Orçamento</Link>
           </FooterColumn>
 
           <div>
             <h3 className="font-heading text-sm font-bold uppercase tracking-[0.18em] text-white">Fale com a LCS</h3>
             <ul className="mt-4 space-y-3 text-sm text-white/70">
               <li className="flex gap-2"><Icon name="phone" className="h-4 w-4 text-soft-blue" /> {siteConfig.phone}</li>
-              <li className="flex gap-2"><Icon name="phone" className="h-4 w-4 text-soft-blue" /> {siteConfig.whatsapp} - ATENDIMENTO AO COLABORADOR</li>
+              <li className="flex gap-2"><Icon name="phone" className="h-4 w-4 text-soft-blue" /> {siteConfig.whatsapp}</li>
               <li className="flex gap-2"><Icon name="mail" className="h-4 w-4 text-soft-blue" /> {siteConfig.email}</li>
               <li className="flex gap-2"><Icon name="pin" className="h-4 w-4 text-soft-blue" /> {siteConfig.address}</li>
             </ul>
           </div>
         </div>
         <div className="border-t border-white/10 px-4 py-5 text-center text-xs text-white/60">
-          © {new Date().getFullYear()} LCS — Libertad Comercial e Serviços. Todos os direitos reservados.
+          © 2026 LCS — Libertad Comercial e Serviços. Todos os direitos reservados.
         </div>
       </div>
     </footer>
@@ -85,7 +83,7 @@ function FooterColumn({ title, children }: { title: string; children: React.Reac
   return (
     <div>
       <h3 className="font-heading text-sm font-bold uppercase tracking-[0.18em] text-white">{title}</h3>
-      <div className="mt-4 grid gap-2 text-sm text-white/70 [&_a]:transition [&_a:hover]:text-white">
+      <div className="mt-4 grid gap-2 text-sm text-white/70 [&_a]:transition hover:[&_a]:text-white">
         {children}
       </div>
     </div>

@@ -56,7 +56,6 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
 
       <section className="section-y bg-page">
         <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
           <SectionHeading title={isIndustry ? 'Desafios do setor industrial' : `Desafios de ${segment.title}`} description="Entendemos os principais desafios que impactam produtividade, experiência e segurança da operação." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {['Ambientes críticos', 'Manutenção da produtividade', 'Padronização de processos', 'Gestão de pessoas e terceiros', 'Conformidade e auditorias', 'Custos operacionais'].map((item, index) => (
@@ -68,7 +67,6 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
 
       <section className="section-y bg-white">
         <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
           <SectionHeading title={`Serviços mais indicados para ${segment.title.toLowerCase()}`} description="Soluções completas para manter sua operação segura, eficiente e dentro do padrão." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {services.slice(0, 6).map((service) => (
@@ -80,13 +78,12 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
 
       <section className="section-y bg-page">
         <Container>
-          
           <div className="grid gap-12 lg:grid-cols-3">
             <div>
               <SectionHeading align="left" title="Benefícios para a sua operação" />
               <ul className="mt-8 grid gap-4 text-slate-700">
                 {['Mais segurança para pessoas, equipamentos e processos.', 'Redução de falhas operacionais.', 'Padronização e conformidade em todas as rotinas.', 'Equipes treinadas, supervisionadas e alinhadas.', 'Melhoria contínua com foco em eficiência.'].map((item) => (
-                  <li key={item} className="flex gap-3 rounded-2xl bg-white p-4 shadow-card items-center font-semibold"><span className="font-black text-royal "><IconBadge name="check" className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-soft-blue/30 text-royal" /></span>{item}</li>
+                  <li key={item} className="flex gap-3"><span className="font-black text-royal">✓</span>{item}</li>
                 ))}
               </ul>
             </div>
@@ -105,7 +102,7 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
               <SectionHeading align="left" title={`Por que escolher a LCS para ${segment.title.toLowerCase()}?`} />
               <div className="mt-8 grid gap-4">
                 {['Experiência em operações complexas', 'Soluções personalizadas', 'Foco em segurança e qualidade', 'Atendimento ágil e comunicação transparente', 'Suporte próximo'].map((item) => (
-                  <div key={item} className="flex gap-3 rounded-2xl bg-white p-4 shadow-card items-center"><IconBadge name="check" className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-soft-blue/30 text-royal" /> <span className="font-semibold text-slate-700">{item}</span></div>
+                  <div key={item} className="flex gap-3 rounded-2xl bg-white p-4 shadow-card"><IconBadge name="check" className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-soft-blue/30 text-royal" /> <span className="font-semibold text-slate-700">{item}</span></div>
                 ))}
               </div>
             </div>
@@ -115,7 +112,6 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
 
       <section className="section-y bg-white">
         <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
           <SectionHeading title="Perguntas frequentes" />
           <div className="mt-10"><FAQ items={faqs} /></div>
         </Container>

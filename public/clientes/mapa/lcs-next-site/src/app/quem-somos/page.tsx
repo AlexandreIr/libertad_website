@@ -24,11 +24,7 @@ export default function AboutPage() {
                 Uma empresa comprometida com eficiência, presença e <span className="text-royal">confiança.</span>
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-                Somos uma empresa especializada em terceirização de mão de obra e serviços de facilities,
-                oferecendo soluções completas para empresas de todos os portes e segmentos.
-                Contamos com uma equipe altamente qualificada e experiente,
-                preparada para assumir a gestão de diversos serviços operacionais,
-                permitindo que nossos clientes concentrem seus esforços no crescimento e desenvolvimento de seus negócios
+                A LCS entrega soluções operacionais completas que simplificam a gestão, reduzem custos e garantem ambientes organizados, seguros e produtivos todos os dias.
               </p>
             </div>
             <VisualPanel label="Institucional" variant="building" />
@@ -36,21 +32,21 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className="mt-5 relative z-10">
+      <section className="-mt-10 relative z-10">
         <Container>
           <div className="grid gap-4 rounded-3xl border border-slate-200 bg-white p-5 shadow-card md:grid-cols-4">
             {[
-              ['+30 anos', 'de experiência', 'Excelência comprovada.'],
-              ['Equipe', 'treinada', 'Profissionais capacitados e supervisionados.'],
-              ['Atendimento', 'personalizado', 'Soluções alinhadas à realidade de cada cliente.'],
-              ['Contratos', 'sob medida', 'Flexibilidade, segurança e transparência.'],
+              ['+10 anos', 'de atuação', 'Entregando soluções com excelência.'],
+              ['Presença', 'em todo o Brasil', 'Atendimento nacional com estrutura própria.'],
+              ['+500', 'clientes atendidos', 'Empresas de diversos segmentos e portes.'],
+              ['+2.000', 'profissionais', 'Equipes treinadas e supervisionadas.'],
             ].map(([top, title, text], index) => (
-              <div key={title} className="flex gap-4 border-slate-200 p-3 md:border-r last:md:border-r-0">
-                <IconBadge name={index === 0 ? 'check' : index === 1 ? 'people' : index === 2 ? 'headset' : 'document'} />
+              <div key={title} className="flex gap-4 p-3">
+                <IconBadge name={index === 0 ? 'building' : index === 1 ? 'pin' : index === 2 ? 'people' : 'shield'} />
                 <div>
                   <p className="font-heading text-xl font-black text-ink">{top}</p>
                   <p className="font-bold text-navy">{title}</p>
-                  <p className="mt-1 text-sm leading-5 text-slate-500">{text}</p>
+                  <p className="mt-1 text-sm text-slate-500">{text}</p>
                 </div>
               </div>
             ))}
@@ -85,35 +81,26 @@ export default function AboutPage() {
       <section className="section-y bg-white">
         <Container>
           <div className="grid gap-5 md:grid-cols-3">
-            <BenefitCard title="Visão" icon="eye"
-              text="Ser a primeira escolha das organizações que buscam soluções completas e inovadoras em gestão de facilities, 
-            sendo reconhecida pela excelência dos serviços prestados, pela qualificação de nossa equipe e pelo compromisso com a sustentabilidade." />
-            <BenefitCard title="Missão" icon="target"
-              text="Atender e superar as expectativas de nossos clientes por meio da excelência na prestação de serviços, oferecendo soluções eficientes, 
-            seguras e de alta qualidade, que proporcionem a melhor experiência e contribuam para o sucesso de seus negócios." />
-            <BenefitCard title="Valores" icon="diamond"
-              text="A LCS valoriza as pessoas, promovendo equidade, diversidade, inclusão e respeito em um ambiente acolhedor.
-               Incentiva o desenvolvimento profissional, a segurança, 
-               a excelência nos serviços e a melhoria contínua de seus processos e equipes.
-" />
+            <BenefitCard title="Missão" icon="target" text="Oferecer soluções operacionais completas e personalizadas que gerem eficiência, reduzam custos e promovam ambientes organizados." />
+            <BenefitCard title="Visão" icon="eye" text="Ser referência nacional em terceirização de serviços operacionais, reconhecida pela excelência e confiança." />
+            <BenefitCard title="Valores" icon="diamond" text="Ética, transparência, compromisso com resultados, valorização das pessoas, inovação e responsabilidade." />
           </div>
         </Container>
       </section>
 
       <section className="section-y bg-page">
         <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
           <SectionHeading title="Nossos diferenciais" />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              ['diamond','Gestão próxima e personalizada', 'Atendimento consultivo e acompanhamento contínuo com foco no resultado.'],
-              ['briefcase','Equipes treinadas e supervisionadas', 'Profissionais capacitados, uniformizados e alinhados aos padrões LCS.'],
-              ['document','Processos e tecnologia', 'Metodologias eficientes e ferramentas que garantem controle e qualidade.'],
-              ['check','Soluções completas', 'Portfólio integrado para simplificar a gestão e gerar ganhos reais.'],
-              ['shield','Segurança e compliance', 'Padrões legais, operacionais e de segurança em todas as frentes.'],
-              ['rocket','Agilidade no atendimento', 'Respostas rápidas e soluções assertivas para cada situação.']
-            ].map(([icon,title, text], index) => (
-              <BenefitCard key={title} title={title} text={text} icon={icon ? icon: index%2==0 ? 'check' : 'star'} />
+              ['Gestão próxima e personalizada', 'Atendimento consultivo e acompanhamento contínuo com foco no resultado.'],
+              ['Equipes treinadas e supervisionadas', 'Profissionais capacitados, uniformizados e alinhados aos padrões LCS.'],
+              ['Processos e tecnologia', 'Metodologias eficientes e ferramentas que garantem controle e qualidade.'],
+              ['Cobertura nacional', 'Estrutura própria e parceiros estratégicos para atendimento em todo o Brasil.'],
+              ['Soluções completas', 'Portfólio integrado para simplificar a gestão e gerar ganhos reais.'],
+              ['Segurança e compliance', 'Padrões legais, operacionais e de segurança em todas as frentes.'],
+            ].map(([title, text], index) => (
+              <BenefitCard key={title} title={title} text={text} icon={index % 2 === 0 ? 'people' : 'shield'} />
             ))}
           </div>
         </Container>
@@ -124,17 +111,17 @@ export default function AboutPage() {
           <SectionHeading title="Linha do tempo" />
           <div className="mt-12 grid gap-5 md:grid-cols-5">
             {[
-              ['1989', 'Fundação', 'Fundação da LCS com atuação no comércio varejista e atacadista.'],
-              ['Anos iniciais', 'Expansão regional', 'Fornecimento de insumos de limpeza, higiene, descartáveis, kits escolares, kits de higiene e cestas básicas.'],
-              ['Expansão', 'Novas soluções', 'Inclusão da locação de equipamentos de informática no portfólio.'],
-              ['Evolução', 'Ampliação de serviços', 'Ampliação da atuação para a prestação de serviços especializados.'],
-              ['2026+', 'O futuro', 'Continuação da jornada com foco em inovação e excelência.'],
-            ].map(([year, title, text], index) => (
+              ['2014', 'Fundação'],
+              ['2016', 'Expansão regional'],
+              ['2018', 'Novas soluções'],
+              ['2021', 'Presença nacional'],
+              ['2026+', 'O futuro'],
+            ].map(([year, title], index) => (
               <div key={year} className="rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-card">
                 <IconBadge name={index === 4 ? 'rocket' : 'building'} className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-soft-blue/30 text-royal" />
                 <p className="mt-5 font-heading text-2xl font-black text-royal">{year}</p>
                 <h3 className="font-heading text-base font-black text-ink">{title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-600">{text}</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Evolução com foco em eficiência, qualidade e relacionamento de confiança.</p>
               </div>
             ))}
           </div>

@@ -7,7 +7,6 @@ import { Icon, IconBadge } from '@/components/Icon';
 import { SectionHeading } from '@/components/SectionHeading';
 import { VisualPanel } from '@/components/VisualPanel';
 import { benefits, posts, segments, services } from '@/data/site';
-import { ClientsCarousel } from '@/components/ClientsCarousel';
 
 export default function HomePage() {
   return (
@@ -25,17 +24,11 @@ export default function HomePage() {
                 Atuamos com facilities, apoio operacional, limpeza profissional, portaria e terceirização de mão de obra para garantir ambientes organizados, seguros e eficientes.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button
-                  href="/orcamento"
-                  className="relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-105"
-                >
-                <span className="relative z-10">Solicite agora seu orçamento</span>
-
-                <div className="pointer-events-none absolute inset-0 flex h-full w-full justify-center animate-[shine_3s_linear_infinite]">
-                  <div className="h-full w-30 bg-white/20 blur-sm -skew-x-12" />
-                </div>
-                </Button>               
+                <Button href="/orcamento">Solicitar orçamento</Button>
                 <Button href="/servicos" variant="secondary">Conhecer serviços</Button>
+              </div>
+              <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-slate-600">
+                <Icon name="shield" className="h-5 w-5 text-royal" /> Atendimento em todo o Brasil
               </div>
             </div>
             <VisualPanel label="Equipe operacional LCS" />
@@ -43,12 +36,11 @@ export default function HomePage() {
         </Container>
       </section>
 
-
       <section className="-mt-10 relative z-10">
         <Container>
           <div className="grid gap-4 rounded-3xl border border-slate-200 bg-white p-5 shadow-card md:grid-cols-4">
             {[
-              ['+30 anos', 'de experiência', 'Excelência comprovada.'],
+              ['+10 anos', 'de experiência', 'Excelência comprovada em todo o Brasil.'],
               ['Equipe', 'treinada', 'Profissionais capacitados e supervisionados.'],
               ['Atendimento', 'personalizado', 'Soluções alinhadas à realidade de cada cliente.'],
               ['Contratos', 'sob medida', 'Flexibilidade, segurança e transparência.'],
@@ -68,19 +60,17 @@ export default function HomePage() {
 
       <section className="section-y bg-page">
         <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
           <SectionHeading title="O que fazemos" description="Soluções completas para o bom funcionamento do seu negócio." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {services.map((service) => ( service.slug !== 'outros' && (
+            {services.map((service) => (
               <ServiceCard key={service.slug} title={service.title} text={service.short} icon={service.icon} href={`/servicos/${service.slug}`} />
-            )))}
+            ))}
           </div>
         </Container>
       </section>
 
       <section className="section-y bg-white">
         <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
           <SectionHeading title="Soluções por segmento" description="Cada ambiente tem desafios próprios. A LCS adapta equipe, rotina e controle ao contexto de cada operação." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {segments.map((segment) => (
@@ -92,7 +82,6 @@ export default function HomePage() {
 
       <section className="section-y bg-page">
         <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
           <SectionHeading title="Por que escolher a LCS" description="Empresas não contratam apenas execução. Elas contratam previsibilidade, segurança e resposta rápida quando a rotina aperta." />
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {benefits.map((benefit) => <BenefitCard key={benefit.title} {...benefit} />)}
@@ -138,27 +127,14 @@ export default function HomePage() {
 
       <section className="section-y bg-white">
         <Container>
-          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-start">
-            <SectionHeading align='left'  title="Blog LCS" description="Conteúdos para uma gestão mais eficiente, segura e previsível." />
+          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <SectionHeading align="left" title="Blog LCS" description="Conteúdos para uma gestão mais eficiente, segura e previsível." />
             <Link href="/blog" className="font-bold text-red">Ver todos os artigos →</Link>
           </div>
           <div className="grid gap-5 md:grid-cols-3">
             {posts.slice(0, 3).map((post) => (
               <PostCard key={post.slug} title={post.title} category={post.category} date={post.date} excerpt={post.excerpt} href={`/blog/${post.slug}`} />
             ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="section-y bg-page md:block hidden">
-        <Container>
-          <hr className="mx-auto mb-6 h-1 w-24 rounded-full border-0 bg-red-600" />
-          <SectionHeading
-            title="Nossos clientes"
-            description="Organizações que confiam na LCS para manter seus ambientes operacionais limpos, seguros e eficientes."
-          />
-          <div className="mt-12">
-            <ClientsCarousel />
           </div>
         </Container>
       </section>
