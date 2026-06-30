@@ -36,7 +36,7 @@ export function SegmentCard({
 }) {
   return (
     <Link href={href} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition hover:-translate-y-1 hover:shadow-xl">
-      <div className="relative h-40 bg-gradient-to-br from-navy via-royal to-soft-blue">
+      <div className="relative h-40 bg-linear-to-br from-navy via-royal to-soft-blue">
         <div className="absolute -right-10 -top-10 h-32 w-32 rotate-45 bg-white/20" />
         <div className="absolute left-6 top-6 grid h-16 w-16 place-items-center rounded-2xl bg-white/95 text-royal shadow-lg">
           <Icon name={icon} className="h-8 w-8" />
@@ -76,7 +76,7 @@ export function PostCard({
 }) {
   return (
     <Link href={href} className="group overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-card transition hover:-translate-y-1 hover:shadow-xl">
-      <div className="h-44 bg-gradient-to-br from-slate-200 via-soft-blue/50 to-royal/70" />
+      <div className="h-44 bg-linear-to-br from-slate-200 via-soft-blue/50 to-royal/70" />
       <div className="p-6">
         <div className="flex items-center justify-between gap-4 text-xs font-bold text-slate-500">
           <span className="rounded-full bg-soft-blue/30 px-3 py-1 text-navy">{category}</span>

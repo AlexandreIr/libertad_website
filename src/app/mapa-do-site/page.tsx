@@ -73,7 +73,7 @@ export default function SiteMapPage() {
               </p>
             </div>
 
-            <div className="relative overflow-hidden rounded-[2rem] bg-navy p-8 text-white shadow-2xl">
+            <div className="relative overflow-hidden rounded-4xl bg-navy p-8 text-white shadow-2xl">
               <div className="absolute -right-16 -top-16 h-44 w-44 rotate-45 bg-royal/40" />
               <div className="absolute -bottom-20 -left-20 h-52 w-52 rotate-45 bg-sky/20" />
 
@@ -116,7 +116,7 @@ export default function SiteMapPage() {
 
 function SiteMapGroupCard({ group }: { group: SiteMapGroup }) {
   return (
-    <section className="rounded-[2rem] border border-slate-200 bg-white p-6 shadow-card sm:p-8">
+    <section className="rounded-4xl border border-slate-200 bg-white p-6 shadow-card sm:p-8">
       <div className="flex items-start gap-4">
         <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-soft-blue/30 text-royal">
           <Icon name="document" className="h-6 w-6" />

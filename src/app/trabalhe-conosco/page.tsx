@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { Button } from '@/components/Button';
 import { Container } from '@/components/Container';
-import { CTASection } from '@/components/CTASection';
 import { IconBadge } from '@/components/Icon';
 import { VisualPanel } from '@/components/VisualPanel';
 
@@ -16,12 +15,12 @@ export default function WorkWithUsPage() {
     <>
       <section className="geometric-bg py-16 lg:py-20">
         <Container>
-          <Breadcrumb items={[{ label: 'Trabalhe Conosco' }]} />
+          <Breadcrumb items={[{ label: 'Trabalhe Conosco'}]} />
           <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.95fr]">
             <div>
               <h1 className="font-heading text-4xl font-black leading-tight tracking-tight text-ink sm:text-5xl">Faça parte de uma equipe que entrega confiança todos os dias.</h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">Buscamos profissionais comprometidos, responsáveis e interessados em crescer em uma empresa com foco em qualidade, segurança e relacionamento.</p>
-              <Button href="mailto:rh@lcsservicos.com.br" className="mt-8">Enviar currículo</Button>
+              <Button href="https://lcslibertadcomercialeservicos.pandape.infojobs.com.br/" className="mt-8">Enviar currículo</Button>
             </div>
             <VisualPanel label="Carreiras LCS" />
           </div>
@@ -36,7 +35,6 @@ export default function WorkWithUsPage() {
           </div>
         </Container>
       </section>
-      <CTASection title="Quer conversar com a LCS?" text="Entre em contato para oportunidades, parcerias ou orçamento." />
     </>
   );
 }
