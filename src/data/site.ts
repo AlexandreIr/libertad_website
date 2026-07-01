@@ -15,7 +15,7 @@ export const navItems = [
   { label: 'Serviços', href: '/servicos' },
   { label: 'Segmentos', href: '/segmentos' },
   { label: 'Quem Somos', href: '/quem-somos' },
- // { label: 'Blog', href: '/blog' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Trabalhe Conosco', href: '/trabalhe-conosco' },
   { label: 'Contato', href: '/orcamento' },
 ];
