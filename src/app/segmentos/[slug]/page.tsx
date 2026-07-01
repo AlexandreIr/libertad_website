@@ -82,7 +82,7 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
         <Container>
           
           <div className="grid gap-12 lg:grid-cols-3">
-            <div>
+            <div className='py-4'>
               <SectionHeading align="left" title="Benefícios para a sua operação" />
               <ul className="mt-8 grid gap-4 text-slate-700">
                 {['Mais segurança para pessoas, equipamentos e processos.', 'Redução de falhas operacionais.', 'Padronização e conformidade em todas as rotinas.', 'Equipes treinadas, supervisionadas e alinhadas.', 'Melhoria contínua com foco em eficiência.'].map((item) => (
@@ -90,7 +90,7 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
                 ))}
               </ul>
             </div>
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card">
+            <div className="rounded-3xl border border-slate-200 bg-white px-6 py-4 shadow-card">
               <SectionHeading align="left" title="Processos e supervisão" description="Metodologia própria para garantir qualidade e controle." />
               <div className="mt-8 grid gap-4">
                 {['Planejamento', 'Execução', 'Supervisão', 'Relatórios'].map((item, index) => (
@@ -101,7 +101,7 @@ export default async function SegmentDetailPage({ params }: { params: Promise<{ 
                 ))}
               </div>
             </div>
-            <div>
+            <div className='py-4'>
               <SectionHeading align="left" title={`Por que escolher a LCS para ${segment.title.toLowerCase()}?`} />
               <div className="mt-8 grid gap-4">
                 {['Experiência em operações complexas', 'Soluções personalizadas', 'Foco em segurança e qualidade', 'Atendimento ágil e comunicação transparente', 'Suporte próximo'].map((item) => (

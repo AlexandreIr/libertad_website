@@ -226,6 +226,15 @@ export const segments = [
     heroTitle:
       'Soluções para varejo e centros comerciais que valorizam experiência e continuidade.',
   },
+  {
+    slug: 'areas-publicas',
+    title: 'Áreas Públicas',
+    icon: 'eye' as IconName,
+    description:
+      'Limpeza, asseio e manutenção de áreas públicas.',
+    heroTitle:
+      'Limpeza, asseio e manutenção de áreas públicas.',
+  }
 ];
 
 export const benefits = [

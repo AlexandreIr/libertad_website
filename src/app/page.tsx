@@ -136,19 +136,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      <section className="section-y bg-white">
-        <Container>
-          <div className="mb-12 flex flex-col justify-between gap-5 md:flex-row md:items-start">
-            <SectionHeading align='left'  title="Blog LCS" description="Conteúdos para uma gestão mais eficiente, segura e previsível." />
-            <Link href="/blog" className="font-bold text-red">Ver todos os artigos →</Link>
-          </div>
-          <div className="grid gap-5 md:grid-cols-3">
-            {posts.slice(0, 3).map((post) => (
-              <PostCard key={post.slug} title={post.title} category={post.category} date={post.date} excerpt={post.excerpt} href={`/blog/${post.slug}`} />
-            ))}
-          </div>
-        </Container>
-      </section>
 
       <section className="section-y bg-page md:block hidden">
         <Container>
